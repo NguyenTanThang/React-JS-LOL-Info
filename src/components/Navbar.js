@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container } from 'reactstrap';
+import {Link} from "react-router-dom";
 
 const Navigator = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -8,20 +9,20 @@ const Navigator = (props) => {
 
   return (
     <div>
-      <Navbar color="faded" className="navbar" light>
+      <Navbar color="faded" className="navbar" lightz>
         <Container>
         <NavbarBrand href="/" className="mr-auto">LOL Info</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/">Champions</NavLink>
+              <Link to="/">Champions</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/items">Items</NavLink>
+              <Link to="/items">Items</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/">GitHub</NavLink>
+              <Link to="https://github.com/NguyenTanThang/React-JS-LOL-Info">GitHub</Link>
             </NavItem>
           </Nav>
         </Collapse>
