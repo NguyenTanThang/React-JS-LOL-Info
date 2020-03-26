@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    background-color: #fbcffc;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.champion-item, .item-container{
+    padding: 20px 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.item-container{
+    max-width: 48%;
+    display: flex;
+    align-items: center;
+}
+
+.item-container-desc{
+    margin-left: 30px;
+}
+
+.navbar{
+    background-color: #fff;
+}
+
+.champion-detail-header{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.champion-skill-item{
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.champion-skill-item:last-child{
+    margin-bottom: 0;
+}
+
+.champion-skill-img{
+    width: 20%;
+    text-align: center;
+}
+
+.champion-skill-desc{
+    width: 70%;
 }

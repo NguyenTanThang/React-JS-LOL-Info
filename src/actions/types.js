@@ -1,0 +1,8 @@
+// Champion Actions
+export const FETCH_CHAMPIONS = "FETCH_CHAMPIONS";
+export const GET_CHAMPION_BY_ID = "GET_CHAMPION_BY_NAME";
+export const SEARCH_CHAMPION_BY_NAME = "SEARCH_CHAMPION_BY_NAME";
+
+// Item Actions
+export const FETCH_ITEMS = "FETCH_ITEMS";
+export const SEARCH_ITEM_BY_NAME = "SEARCH_ITEM_BY_NAME";
