@@ -16,9 +16,6 @@ class Pagination extends Component {
         return (
             <nav aria-label="Page Navigation">
                 <ul className="pagination justify-content-center">
-                    <li className="page-item">
-                        <button className="page-link" onClick={() => {changeCurrentPage(1)}}>Start</button>
-                    </li>
 
                     <li className="page-item">
                         <button className="page-link" onClick={() => {changeCurrentPage(currentPage - 1)}}>Previous</button>
@@ -30,9 +27,6 @@ class Pagination extends Component {
                         <button className="page-link" onClick={() => {changeCurrentPage(currentPage + 1)}}>Next</button>
                     </li>
 
-                    <li className="page-item">
-                        <button className="page-link" onClick={() => {changeCurrentPage(totalPages)}}>Final</button>
-                    </li>
                 </ul>
             </nav>
         )

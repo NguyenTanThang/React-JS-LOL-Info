@@ -7,6 +7,13 @@ const Navigator = (props) => {
 
   const toggleNavbar = () => setCollapsed(!collapsed);
 
+  const onChangeRegion = () => {
+    const region = localStorage.getItem("region") === "vn_VN" ? "en_US" : "vn_VN";
+
+    localStorage.setItem("region", region);
+    window.location.reload();
+  }
+
   return (
     <div>
       <Navbar color="faded" className="navbar" light>
@@ -26,9 +33,12 @@ const Navigator = (props) => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink>
-                <Link to="https://github.com/NguyenTanThang/React-JS-LOL-Info">GitHub</Link>
+              <NavLink target="_blank" href="https://github.com/NguyenTanThang/React-JS-LOL-Info">
+                GitHub
               </NavLink>
+            </NavItem>
+            <NavItem>
+              <button className="btn btn-primary" onClick={onChangeRegion}>Switch Language</button>
             </NavItem>
           </Nav>
         </Collapse>

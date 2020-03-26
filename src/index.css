@@ -34,6 +34,7 @@ body{
     display: flex;
     margin-bottom: 50px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .champion-skill-item:last-child{
@@ -47,4 +48,40 @@ body{
 
 .champion-skill-desc{
     width: 70%;
+}
+
+@media (min-width: 320px) and (max-width: 1024px){
+
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    .champion-skill-img{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .champion-skill-desc{
+        width: 100%;
+        text-align: center;
+    }
+
+    .item-container{
+        width: 98%;
+        max-width: 100%;
+    }
+
+    .champion-item>*{
+        margin-bottom: 20px;
+    }
+
+    .champion-item a,
+    .champion-item h5{
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    
 }
