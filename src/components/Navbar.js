@@ -16,13 +16,19 @@ const Navigator = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <Link to="/">Champions</Link>
+              <NavLink>
+                <Link to="/">Champions</Link>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to="/items">Items</Link>
+              <NavLink>
+                <Link to="/items">Items</Link>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to="https://github.com/NguyenTanThang/React-JS-LOL-Info">GitHub</Link>
+              <NavLink>
+                <Link to="https://github.com/NguyenTanThang/React-JS-LOL-Info">GitHub</Link>
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
