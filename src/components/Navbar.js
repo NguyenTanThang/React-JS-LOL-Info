@@ -9,7 +9,7 @@ const Navigator = (props) => {
 
   return (
     <div>
-      <Navbar color="faded" className="navbar" lightz>
+      <Navbar color="faded" className="navbar" light>
         <Container>
         <NavbarBrand href="/" className="mr-auto">LOL Info</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
