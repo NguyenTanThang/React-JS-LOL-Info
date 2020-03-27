@@ -6,8 +6,8 @@ class Pagination extends Component {
         const {changeCurrentPage} = this.props;
 
         const arrayOfPageLinks = pages.map((page) => {
-            return <li className="page-item">
-                <button className="page-link" key={page} onClick={() => {
+            return <li className="page-item"  key={page}>
+                <button className="page-link" onClick={() => {
                     changeCurrentPage(page)
                 }}>{page}</button>
             </li>

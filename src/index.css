@@ -1,3 +1,7 @@
+ol,ul{
+    list-style: none;
+}
+
 body{
     background-color: #fbcffc;
 }
@@ -8,6 +12,10 @@ body{
     margin-bottom: 40px;
     border-radius: 30px;
     background-color: #fff;
+}
+
+.champion-item ul {
+    list-style: disc;
 }
 
 .item-container{
@@ -80,8 +88,38 @@ body{
         text-align: center;
     }
 
+    .tft-champion-container{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .tft-champion-container >*{
+        margin-bottom: 20px;
+    }
+
+    .tft-champion-container .item-container-desc{
+        margin-left: 0;
+    }
+
+    .traits-list{
+        padding-left: 0;
+    }
+
+    .tft-champion-container>*{
+        width: 100%;
+        text-align: center;
+    }
+
+    .tft-champ-img{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
-    
+    .tft-champion-container{
+        max-width: 70%;
+    }
 }

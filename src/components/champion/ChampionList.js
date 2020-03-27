@@ -12,6 +12,7 @@ class ChampionList extends Component {
         championName: "",
         championList: [],
         currentPage: 1,
+        championTags: []
     }
 
     componentDidMount() {
@@ -30,6 +31,18 @@ class ChampionList extends Component {
         })
     }
 
+    sortByTag = (e) => {
+        const itemName = e.target.value;
+
+        if (itemName !== "all"){
+            this.props.fetchChampions();
+        } else {
+            this.props.fetchChampions().filter(champion => {
+                return champion.tags.includes(itemName)
+            });
+        }
+    }
+
     render() {
         const pageObject = paginate(this.props.champions.length, this.state.currentPage, 5, 5)
         console.log(pageObject);
@@ -39,7 +52,6 @@ class ChampionList extends Component {
         const championList = currentChampionList.map((championItem, index) => {
             return <ChampionItem key={championItem.key} championItem={championItem} championImageURL={getChampionFaceImage(championItem.id)}/>
         })
-        
 
         return (
             <div>
