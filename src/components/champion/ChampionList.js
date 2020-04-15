@@ -25,11 +25,7 @@ class ChampionList extends Component {
         this.props.searchChampionByName(championName);
     }
 
-    changeCurrentPage = (pageNum) => {
-        this.setState({
-            currentPage: pageNum
-        })
-    }
+    z
 
     sortByTag = (e) => {
         const itemName = e.target.value;
@@ -44,7 +40,7 @@ class ChampionList extends Component {
     }
 
     render() {
-        const pageObject = paginate(this.props.champions.length, this.state.currentPage, 5, 5)
+        const pageObject = paginate(this.props.champions.length, this.state.currentPage, 6, 5)
         console.log(pageObject);
 
         const currentChampionList = this.props.champions.slice(pageObject.startIndex, pageObject.endIndex + 1);

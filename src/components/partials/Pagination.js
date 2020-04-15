@@ -6,6 +6,13 @@ class Pagination extends Component {
         const {changeCurrentPage} = this.props;
 
         const arrayOfPageLinks = pages.map((page) => {
+            if (page == currentPage){
+                return <li className="page-item active" key={page}>
+                <button className="page-link" onClick={() => {
+                    changeCurrentPage(page)
+                }}>{page}</button>
+            </li>
+            }
             return <li className="page-item"  key={page}>
                 <button className="page-link" onClick={() => {
                     changeCurrentPage(page)
