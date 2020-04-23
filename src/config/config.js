@@ -1,17 +1,7 @@
 import axios from "axios";
 
-export const LATEST_VERSION = "10.6.1";
-let region = ""
-if (localStorage.getItem("region") === undefined){
-    region = "en_US"
-} 
-else if (localStorage.getItem("region") === "en_US"){
-    region = "en_US"
-}
-else {
-    region = "vn_VN"
-}
-export const REGION = region;
+export const LATEST_VERSION = "10.8.1";
+export const REGION = "en_US";
 
 // Champion URL
 

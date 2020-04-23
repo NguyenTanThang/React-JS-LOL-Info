@@ -25,7 +25,11 @@ class ChampionList extends Component {
         this.props.searchChampionByName(championName);
     }
 
-    z
+    changeCurrentPage = (pageNum) => {
+        this.setState({
+            currentPage: pageNum
+        })
+    }
 
     sortByTag = (e) => {
         const itemName = e.target.value;
