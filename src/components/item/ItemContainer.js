@@ -12,7 +12,7 @@ class ItemContainer extends Component {
                         <h4>{item.name}</h4>
                         <p>{item.plaintext}</p>
                         <h6>Types:</h6>
-                        <ul>
+                        <ul className="item-usage-list">
                             {item.tags.map((tag, index) => {
                                 return <li key={index}>{tag}</li>
                             })}

@@ -1,4 +1,4 @@
-let champions = JSON.stringify(
+let traits = JSON.stringify(
     [
         {
           "key": "Set3_Blademaster",
@@ -374,8 +374,8 @@ let champions = JSON.stringify(
       ]
 )
 
-champions = JSON.parse(champions);
+traits = JSON.parse(traits);
 
-console.log(champions)
+console.log(traits)
 
-export default champions;
+export default traits;

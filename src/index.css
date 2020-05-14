@@ -24,6 +24,10 @@ body{
     align-items: center;
 }
 
+.item-usage-list{
+    list-style-type: disc;
+}
+
 .item-container-desc{
     margin-left: 30px;
 }

@@ -1,4 +1,4 @@
-let champions = JSON.stringify(
+let items = JSON.stringify(
     [
         {
           "id": 1,
@@ -219,8 +219,8 @@ let champions = JSON.stringify(
       ]
 )
 
-champions = JSON.parse(champions);
+items = JSON.parse(items);
 
-console.log(champions)
+console.log(items)
 
-export default champions;
+export default items;
