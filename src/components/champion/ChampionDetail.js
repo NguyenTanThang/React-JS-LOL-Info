@@ -74,7 +74,7 @@ class ChampionDetail extends Component {
             <div>
 
                 <div className="container">
-                    <div className="row champion-item">
+                    <div className="row champion-item champion-details-container">
                         <div className="col-12 champion-detail-header">
                             <h3>Overview</h3>
                         </div>

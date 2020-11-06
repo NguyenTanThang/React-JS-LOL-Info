@@ -1,12 +1,16 @@
 import axios from "axios";
 
-export const LATEST_VERSION = "10.8.1";
+export const LATEST_VERSION = "10.22.1";
 export const REGION = "en_US";
 
 // Champion URL
 
 export const getSearchChampionByIDURL = (championName) => {
     return `https://ddragon.leagueoflegends.com/cdn/${LATEST_VERSION}/data/${REGION}/champion/${championName}.json`
+}
+
+export const getChampionLoadingImage = (championName, imageCode) => {
+    return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championName}_${imageCode}.jpg`
 }
 
 export const getAllChampionsURL = `https://ddragon.leagueoflegends.com/cdn/${LATEST_VERSION}/data/${REGION}/champion.json`;
@@ -64,8 +68,13 @@ export const getItemImage = (itemID) => {
 // TFT URL
 
 export const getTFTChampionImage = (championName) => {
+    console.log("championName")
+    console.log(championName)
+    if (championName.includes("Willump")) {
+        championName = "Nunu"
+    }
     championName = championName.replace(/-|\s|'/g,"").toLowerCase();
-    return `/champions/${championName}.png`;
+    return `/champions/TFT4_${championName}.png`;
 }
 
 export const getTFTTrait = (traitName) => {

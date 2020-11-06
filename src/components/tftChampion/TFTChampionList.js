@@ -79,7 +79,7 @@ class TFTChampionList extends Component {
                                 <select onChange={this.sortByTrait} className="custom-select">
                                     <option key="9999" value="all">All</option>
                                     {tftTraits.map((tftTrait, index) => {
-                                        return <option key={index} value={tftTrait.name}>{tftTrait.name}</option>
+                                        return <option key={index} value={tftTrait.key}>{tftTrait.name}</option>
                                     })}
                                 </select>
                             </div>

@@ -4,8 +4,15 @@ import {getTFTChampionImage, getTFTTrait} from "../../config/config";
 export default class TFTChampionItem extends Component {
     render() {
         const tftChampion = this.props.tftChampion;
-        const tftChampionImageURL = getTFTChampionImage(tftChampion.name)
+        const tftChampionImageURL = getTFTChampionImage(`${tftChampion.name}`)
         const traitsImageURLs = tftChampion.traits.map(trait => {
+            if (trait === "Boss") {
+                trait = "theboss";
+            }
+            if (trait.includes("Set4_")) {
+                console.log(trait);
+                trait = trait.substring(5);
+            }
             return getTFTTrait(trait)
         })
 
@@ -18,9 +25,12 @@ export default class TFTChampionItem extends Component {
                         <h6>Traits:</h6>
                         <ul className="traits-list d-flex text-center justify-content-around">
                             {traitsImageURLs.map((traitsImageURL, index) => {
+                                
                                 return <li key={index}>
                                     <img src={traitsImageURL} alt={tftChampion.traits[index]}/>
-                                    <p>{tftChampion.traits[index]}</p>
+                                    <p>
+                                        {tftChampion.traits[index].includes("Set4_") ? tftChampion.traits[index].substring(5) : tftChampion.traits[index]}
+                                    </p>
                                 </li>
                             })} 
                         </ul>

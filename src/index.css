@@ -1,12 +1,15 @@
-ol,ul{
+ol,
+ul {
     list-style: none;
 }
 
-body{
-    background-color: #fbcffc;
+body {
+    background-color: #4b4b4b;
 }
 
-.champion-item, .item-container{
+
+.champion-item,
+.item-container {
     padding: 20px 40px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -18,112 +21,179 @@ body{
     list-style: disc;
 }
 
-.item-container{
+.item-container {
     max-width: 48%;
     display: flex;
     align-items: center;
 }
 
-.item-usage-list{
+.item-usage-list {
     list-style-type: disc;
 }
 
-.item-container-desc{
+.item-container-desc {
     margin-left: 30px;
 }
 
-.navbar{
+.navbar {
     background-color: #fff;
 }
 
-.champion-detail-header{
+.champion-detail-header {
     margin-top: 50px;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.champion-skill-item{
+.champion-skill-item {
     display: flex;
     margin-bottom: 50px;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.champion-skill-item:last-child{
+.champion-skill-item:last-child {
     margin-bottom: 0;
 }
 
-.champion-skill-img{
+.champion-skill-img {
     width: 20%;
     text-align: center;
 }
 
-.champion-skill-desc{
+.champion-skill-desc {
     width: 70%;
 }
 
-@media (min-width: 320px) and (max-width: 1024px){
-
+.traits-list {
+    width: 100%;
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-    .champion-skill-img{
+.item-container-desc {
+    width: 60%;
+}
+
+.champion-list {
+    justify-content: space-around;
+}
+
+.champion-item-container {
+    flex: 24%;
+    max-width: 24%;
+    padding: 0;
+    background-color: transparent;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.champion-item-container img {
+    transition: all 0.3s ease;
+}
+
+.champion-item-container:hover img {
+    -webkit-filter: brightness(60%);
+}
+
+.champion-title h4 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 10px;
+    font-size: 1.4rem;
+    background-color: #3d3d3d;
+    color: #FFF;
+    transition: all 0.3s ease;
+}
+
+.champion-item-container:hover .champion-title h4 {
+    color: #ffb8b8;
+}
+
+.champion-title {
+    text-decoration: none !important;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .champion-skill-img {
         width: 100%;
         text-align: center;
         margin-bottom: 20px;
     }
-    
-    .champion-skill-desc{
+
+    .champion-skill-desc {
         width: 100%;
         text-align: center;
     }
 
-    .item-container{
+    .item-container {
         width: 98%;
         max-width: 100%;
     }
 
-    .champion-item>*{
+    .champion-item>* {
         margin-bottom: 20px;
     }
 
     .champion-item a,
-    .champion-item h5{
+    .champion-item h5 {
         text-align: center;
     }
 
-    .tft-champion-container{
+    .tft-champion-container {
         flex-wrap: wrap;
         text-align: center;
     }
 
-    .tft-champion-container >*{
+    .tft-champion-container>* {
         margin-bottom: 20px;
     }
 
-    .tft-champion-container .item-container-desc{
+    .tft-champion-container .item-container-desc {
         margin-left: 0;
     }
 
-    .traits-list{
+    .traits-list {
         padding-left: 0;
     }
 
-    .tft-champion-container>*{
+    .tft-champion-container>* {
         width: 100%;
         text-align: center;
     }
 
-    .tft-champ-img{
+    .tft-champ-img {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
     }
+
+    .champion-item-container {
+        flex: 45%;
+        max-width: 45%;
+    }
+
+    .champion-title h4 {
+        font-size: 1rem;
+    }
+
+    .champion-details-container {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-    .tft-champion-container{
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tft-champion-container {
         max-width: 70%;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .champion-item-container {
+        flex: 30%;
+        max-width: 30%;
     }
 }

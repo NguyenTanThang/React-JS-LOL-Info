@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import {fetchChampions, searchChampionByName} from "../../actions/championActions";
 import paginate from "../../utils/paginate";
 import Pagination from "../partials/Pagination";
-import {getChampionFaceImage} from "../../config/config";
+import {getChampionFaceImage, getChampionLoadingImage} from "../../config/config";
 
 class ChampionList extends Component {
 
@@ -44,13 +44,13 @@ class ChampionList extends Component {
     }
 
     render() {
-        const pageObject = paginate(this.props.champions.length, this.state.currentPage, 6, 5)
+        const pageObject = paginate(this.props.champions.length, this.state.currentPage, 8, 5)
         console.log(pageObject);
 
         const currentChampionList = this.props.champions.slice(pageObject.startIndex, pageObject.endIndex + 1);
 
         const championList = currentChampionList.map((championItem, index) => {
-            return <ChampionItem key={championItem.key} championItem={championItem} championImageURL={getChampionFaceImage(championItem.id)}/>
+            return <ChampionItem key={championItem.key} championItem={championItem} championImageURL={getChampionFaceImage(championItem.id)} championLoadingImageURL={getChampionLoadingImage(championItem.id, 0)}/>
         })
 
         return (
@@ -65,7 +65,9 @@ class ChampionList extends Component {
                 </div>
 
                 <div className="container">
-                    {championList}
+                    <div className="row champion-list">
+                        {championList}
+                    </div>
                 </div>
 
                 <div className="container pagination-container">
