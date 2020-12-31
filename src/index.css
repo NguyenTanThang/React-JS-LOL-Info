@@ -7,6 +7,24 @@ body {
     background-color: #4b4b4b;
 }
 
+/* Pagination */
+.pagination {
+
+}
+
+.pagination li button {
+    border: 1px solid #FFF;
+    color: #FFF;
+    background-color: transparent;
+}
+
+.pagination li.active button {
+    background-color: #ffb8b8 !important;
+    border: 1px solid #FFF;
+    border-color: #FFF !important;
+}
+
+
 
 .champion-item,
 .item-container {
@@ -78,8 +96,8 @@ body {
 }
 
 .champion-item-container {
-    flex: 24%;
-    max-width: 24%;
+    flex: 16%;
+    max-width: 16%;
     padding: 0;
     background-color: transparent;
     margin: 0;
@@ -87,7 +105,9 @@ body {
 }
 
 .champion-item-container img {
+    height: 300px;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .champion-item-container:hover img {
@@ -98,10 +118,14 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     padding: 10px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background-color: #3d3d3d;
     color: #FFF;
     transition: all 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 .champion-item-container:hover .champion-title h4 {
@@ -110,6 +134,49 @@ body {
 
 .champion-title {
     text-decoration: none !important;
+}
+
+/* Search Form */
+.search-form {
+    padding: 50px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.search-form label {
+    color: #FFF;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.search-form input,
+.search-form select {
+    background-color: #3d3d3d;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #FFF;
+}
+
+.search-form input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #3d3d3d !important;
+    color: #FFF;
+}
+
+.item-container {
+    border: 1px solid #FFF;
+    background-color: transparent;
+}
+
+.item-container * {
+    color: #FFF;
+}
+
+.champion-skill-img img {
+    width: 100px;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {}

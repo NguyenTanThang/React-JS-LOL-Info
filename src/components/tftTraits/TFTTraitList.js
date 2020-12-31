@@ -46,8 +46,8 @@ class TFTItemList extends Component {
 
         return (
             <div>
+            <div className="search-form search-tft-traits">
                 <div className="container">
-                    <div className="champion-item">
                         <form>
                             <label>Item Name:</label>
                             <input type="text" className="form-control" placeholder="Your Champion's Name" onChange={this.onSearchItemByName}/>

@@ -42,8 +42,8 @@ class ChampionList extends Component {
 
         return (
             <div>
+            <div className="search-form search-items">
                 <div className="container">
-                    <div className="champion-item">
                         <form>
                             <label>Item Name:</label>
                             <input type="text" className="form-control" placeholder="Your Item's Name" onChange={this.onSearchItemByName}/>

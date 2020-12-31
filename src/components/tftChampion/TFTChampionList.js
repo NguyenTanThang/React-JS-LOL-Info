@@ -66,8 +66,8 @@ class TFTChampionList extends Component {
 
         return (
             <div>
+            <div className="search-form search-tft-champions">
                 <div className="container">
-                    <div className="champion-item">
                         <form>
                             <div className="form-group">
                                 <label>Item Name:</label>

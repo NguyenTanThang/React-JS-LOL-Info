@@ -44,7 +44,7 @@ class ChampionList extends Component {
     }
 
     render() {
-        const pageObject = paginate(this.props.champions.length, this.state.currentPage, 8, 5)
+        const pageObject = paginate(this.props.champions.length, this.state.currentPage, 12, 5)
         console.log(pageObject);
 
         const currentChampionList = this.props.champions.slice(pageObject.startIndex, pageObject.endIndex + 1);
@@ -55,8 +55,8 @@ class ChampionList extends Component {
 
         return (
             <div>
-                <div className="container">
-                    <div className="champion-item">
+                <div className="search-form search-champions">
+                    <div className="container">
                         <form>
                             <label>Champion Name:</label>
                             <input type="text" className="form-control" placeholder="Your Champion's Name" onChange={this.onSearchChampionByName}/>
