@@ -1,6 +1,7 @@
 import axios from "axios";
+import { capitalizeFirstLetter } from "../utils";
 
-export const LATEST_VERSION = "10.22.1";
+export const LATEST_VERSION = "13.9.1";
 export const REGION = "en_US";
 
 // Champion URL
@@ -74,7 +75,7 @@ export const getTFTChampionImage = (championName) => {
         championName = "Nunu"
     }
     championName = championName.replace(/-|\s|'/g,"").toLowerCase();
-    return `/champions/TFT4_${championName}.png`;
+    return `/champions/TFT4_${capitalizeFirstLetter(championName)}.png`;
 }
 
 export const getTFTTrait = (traitName) => {
